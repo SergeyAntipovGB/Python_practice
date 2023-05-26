@@ -314,6 +314,28 @@ print(result_list)
 '''
 
 
+# Дана последовательность из N целых чисел и число K.
+# Необходимо сдвинуть всю последовательность (сдвиг - циклический)
+# на K элементов.
+
+# K – может быть как положительным так и отрицательным числом.
+
+
+'''
+n = [1, 2, 3, 4, 5, 6, 7]
+print(n)
+step = int(input('введи количество сдвигов > '))
+for i in range(abs(step)):
+    if step > 0:
+        n.insert(0, n.pop(len(n) - 1))
+        message = "вправо"
+    elif step < 0:
+        n.insert(len(n) - 1, n.pop(0))
+        message = "влево"
+print(f'смещение {message} на {abs(step)} знаков\n{n}')
+'''
+
+
 # Задача №21. Решение в группах
 # Напишите программу для печати всех уникальных значений в словаре.
 
@@ -324,14 +346,14 @@ print(result_list)
 
 
 '''
-d = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"},
-     {"VII": "S005"}, {"V":"S009"}, {"VIII":"S007"}]
-n = set()
-for i in range(len(d)):
-    n.add(d[i]["V"])
-    n.add(d[i]["VI"])
-    n.add(d[i]["VII"])
-print(n)
+data = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"},
+        {"VII": "S005"}, {"V":"S009"}, {"VIII":"S007"}]
+mas = set()
+print(data)
+for i in range(len(data)):
+	for k in data[i]:
+		mas.add(data[i][k])
+print(mas)
 
 
 data = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, 
@@ -365,16 +387,13 @@ print(values)
 '''
 from random import randint
 
-n = int(input('введи количество элементов > '))
-l = [i for randint(-10, 10) in range(n)]
-
-print(l)
-
-
-data = [int(i) for i in input("Введите числа: ").split()]
+# massive = [int(i) for i in input("Введите числа: ").split()]
+length = 15
+massive = [randint(-10, 10) for i in range(length)]
+print(massive)
 count = 0
-for i in range(len(data) - 1):
-    if data[i + 1] > data[i]:
+for i in range(1, length):
+    if massive[i - 1] < massive[i]:
         count += 1
 print(count)
 '''
