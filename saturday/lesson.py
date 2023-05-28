@@ -13,7 +13,7 @@ os.system('clear')
 # .split()
 
 
-spisok = [a a a b c a a d c d d]
+# spisok = [a a a b c a a d c d d]
 myList = [i for i in input('> ').split()]
 resultList = set()
 for item in myList:
