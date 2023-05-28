@@ -412,7 +412,7 @@ for i in range(1, length):
 print(count)
 '''
 
-
+# Домашняя задача 3го семинара
 '''
 one = ('А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т', 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R',
        'а', 'в', 'е', 'и', 'н', 'о', 'р', 'с', 'т', 'a', 'e', 'i', 'o', 'u', 'l', 'n', 's', 't', 'r')
@@ -436,4 +436,47 @@ for myChar in word:
     for i in myList:
         count += whereChar(myChar, i, dic)
 print(f'получаете {count} балла (ов)')
+'''
+
+'''
+
+k = int(input())
+m = abs(k - list_1[0])  # модуль разности
+numbers = []  # список для хранения чисел
+
+for i in range(len(list_1)):
+    if abs(list_1[i] - k) <= m:
+        if abs(list_1[i] - k) < m:
+            numbers = []  # очищаем список, если нашли число ближайшее, чем предыдущее
+            m = abs(list_1[i] - k)
+        numbers.append(list_1[i])
+'''
+
+
+'''
+dict_1 = {'AEIOULNSTRАВЕИНОРСТ': 1, 'DGДКЛМПУ': 2, 'BCMPБГЁЬЯ': 3, 'FHVWYЙЫ': 4, 'KЖЗХЦЧ': 5, 'JXШЭЮ': 8, 'QZФЩЪ': 10} 
+word = list(input('Введите слово буквами верхнего регистра: '))
+price = 0
+for i in word:
+    for key in dict_1:
+        if i in key:
+            price = price + dict_1.get(key)
+print(f'Стоимость слова: {price}.')
+'''
+
+'''
+onePoints = dict.fromkeys(['А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 1)
+twoPoints = dict.fromkeys(['Д', 'К', 'Л', 'М', 'П', 'У'], 2)
+threePoints = dict.fromkeys(['Б', 'Г', 'Ё', 'Ь', 'Я' ], 3)
+fourPoints = dict.fromkeys(['Й', 'Ы'], 4)
+fivePoints = dict.fromkeys(['Ж', 'З', 'Х', 'Ц', 'Ч'], 5)
+eightPoints = dict.fromkeys(['Ш', 'Э', 'Ю'], 8)
+tenPoints = dict.fromkeys(['Ф', 'Щ', 'Ъ'], 10)
+mergedDict = onePoints | twoPoints | threePoints | fourPoints | fivePoints | eightPoints | tenPoints 
+
+userText = list(input("Введите одно слово ").upper())
+sum = 0
+for i in userText:
+    sum += mergedDict[i]
+print(sum)
 '''
