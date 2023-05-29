@@ -439,21 +439,6 @@ print(f'получаете {count} балла (ов)')
 '''
 
 '''
-
-k = int(input())
-m = abs(k - list_1[0])  # модуль разности
-numbers = []  # список для хранения чисел
-
-for i in range(len(list_1)):
-    if abs(list_1[i] - k) <= m:
-        if abs(list_1[i] - k) < m:
-            numbers = []  # очищаем список, если нашли число ближайшее, чем предыдущее
-            m = abs(list_1[i] - k)
-        numbers.append(list_1[i])
-'''
-
-
-'''
 dict_1 = {'AEIOULNSTRАВЕИНОРСТ': 1, 'DGДКЛМПУ': 2, 'BCMPБГЁЬЯ': 3, 'FHVWYЙЫ': 4, 'KЖЗХЦЧ': 5, 'JXШЭЮ': 8, 'QZФЩЪ': 10} 
 word = list(input('Введите слово буквами верхнего регистра: '))
 price = 0
@@ -464,7 +449,8 @@ for i in word:
 print(f'Стоимость слова: {price}.')
 '''
 
-'''
+
+'''               #  Делает каждую букву отдельным ключем
 onePoints = dict.fromkeys(['А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 1)
 twoPoints = dict.fromkeys(['Д', 'К', 'Л', 'М', 'П', 'У'], 2)
 threePoints = dict.fromkeys(['Б', 'Г', 'Ё', 'Ь', 'Я' ], 3)
@@ -473,12 +459,25 @@ fivePoints = dict.fromkeys(['Ж', 'З', 'Х', 'Ц', 'Ч'], 5)
 eightPoints = dict.fromkeys(['Ш', 'Э', 'Ю'], 8)
 tenPoints = dict.fromkeys(['Ф', 'Щ', 'Ъ'], 10)
 mergedDict = onePoints | twoPoints | threePoints | fourPoints | fivePoints | eightPoints | tenPoints 
-
 userText = list(input("Введите одно слово ").upper())
 sum = 0
 for i in userText:
     sum += mergedDict[i]
 print(sum)
+'''
+
+
+'''
+k = int(input())
+m = abs(k - list_1[0])  # модуль разности
+numbers = []  # список для хранения чисел
+
+for i in range(len(list_1)):
+    if abs(list_1[i] - k) <= m:
+        if abs(list_1[i] - k) < m:
+            numbers = []  # очищаем список, если нашли число ближайшее, чем предыдущее
+            m = abs(list_1[i] - k)
+        numbers.append(list_1[i])
 '''
 
 
