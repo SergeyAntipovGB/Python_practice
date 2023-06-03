@@ -680,6 +680,15 @@ Output: yes
 # else: print('не простое число')
 
 
+# def simple(num):           # решение с помощью рекурсии
+#     if num == 1: return 'Простое'
+#     elif n % (num) == 0: return 'Не простое'
+#     return simple(num - 1)
+
+# n = 11
+# print(simple(n // 2))
+
+
 '''
 Задача 37:
 Дано натуральное число N и последовательность из N элементов.
@@ -699,3 +708,19 @@ Output: 4 3
 
 # n = 3
 # print(invert(n))
+
+
+'''
+Проверка слова на палиндром
+'''
+
+
+# def pal(word):
+#     if len(word) == 0: return ''
+#     c = word.pop(0)
+#     return pal(word) + c
+
+# word = 'око'
+# text = [item for item in word]
+# if word == pal(text): print(f'слово {word} - палиндром')
+# else: print(f'слово {word} - не палиндром')
