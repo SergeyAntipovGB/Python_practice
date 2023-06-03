@@ -724,3 +724,12 @@ Output: 4 3
 # text = [item for item in word]
 # if word == pal(text): print(f'слово {word} - палиндром')
 # else: print(f'слово {word} - не палиндром')
+
+
+# def pal(text):
+#     if text == '': return ''
+#     return text[-1] + pal(text[:-1])
+
+# word = 'локон'
+# if word == pal(word): print(f'слово {word} - палиндром')
+# else: print(f'слово {word} - не палиндром')
