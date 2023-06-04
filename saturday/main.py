@@ -733,3 +733,10 @@ Output: 4 3
 # word = 'локон'
 # if word == pal(word): print(f'слово {word} - палиндром')
 # else: print(f'слово {word} - не палиндром')
+
+
+# def is_palindrome(word):  
+#     if word == word[::-1]:
+#         return 'yes'
+#     return 'no'
+# print(is_palindrome("ollo"))
