@@ -1,4 +1,3 @@
 import os
-os.system('clear')
+os.system('clear') 
 from random import randint
-
