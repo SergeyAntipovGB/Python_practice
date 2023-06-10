@@ -941,6 +941,10 @@ transormed_values = list(map(transformation, values))
 # print(*find_farthest_orbit(orbits))
 
 
+# orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+# print(max(orbits, key=lambda x: (x[0] != x[1])* x[0] * x[1]))
+
+
 # def maxSquare(orbits, count = 0, max = 0):
 #     if count == len(orbits): return tuple(maxr[-1])
 #     if orbits[count][0] != orbits[count][1]:
@@ -997,3 +1001,47 @@ else:
 #     print('same')
 # else:
 #     print('different')
+
+
+'''
+Доп. задача 1.
+Вводится список целых чисел в одну строчку через пробел. Необходимо оставить в нем только двузначные числа. Реализовать программу с использованием функции filter. Результат отобразить на экране в виде последовательности оставшихся чисел в одну строчку через пробел.
+
+ пример  - 8 11 0 -23 140 1 => 11 -23
+'''
+
+
+# list1 = '-8 11 0 -23 140 1'.split()
+# print(*list(filter(lambda i: len(str(abs(int(i)))) == 2, list1)))
+
+
+'''
+Доп. задача 2. 
+Дан список, вывести отдельно буквы и цифры.
+
+a = ( "a", 'b', '2', '3' ,'c')
+b = ( 'a' , 'b' , 'c')
+c = ( '1', '2', '3')
+'''
+
+
+# a = ( "a", 'b', '2', '3' ,'c')
+# b = ( 'a' , 'b' , 'c')
+# c = ( '1', '2', '3')
+# print(list(filter(lambda x: x in b, a)))
+# print(list(filter(lambda x: x in c, a)))
+
+
+'''
+Доп. задача 3.
+Напишите программу, которая подсчитает и выведет сумму квадратов всех двузначных чисел, делящихся на 9.
+При решении задачи используйте комбинацию функций filter, map, sum.
+
+Обратите внимание: на 9 должно делиться исходное двузначное число, а не его квадрат.
+'''
+
+
+# numbers = [i for i in range(10, 100)]
+# print(sum(map(lambda x: x ** 2, filter(lambda x: x % 9 == 0, numbers))))
+
+
